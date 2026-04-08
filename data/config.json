@@ -1,41 +1,81 @@
 {
   "project": {
-    "title": "Dura-Europos Images",
-    "subtitle": "Timeline View"
+    "name": "Dura-Europos Images",
+    "quality": 1
   },
-
   "loader": {
-    "data": "data/data.csv",
-    "timeline": "data/timeline.csv",
     "info": "data/info.md",
-
+    "timeline": "data/timeline.csv",
+    "items": "data/data.csv",
     "layouts": [
       {
-        "title": "Time",
-        "type": "group",
-        "groupKey": "year",
-        "columns": 5
+        "title": "Time"
       }
-    ]
+    ],
+    "textures": {
+      "medium": {
+        "size": 1024,
+        "url": "data/sprites/spritesheet.json"
+      },
+      "detail": {
+        "size": 1024,
+        "url": "data/1024/"
+      },
+      "big": {
+        "size": 4096,
+        "url": "data/4096/"
+      }
+    }
   },
-
+  "style": {
+    "fontColor": "#2d3b43",
+    "fontColorActive": "#eae2cb",
+    "fontBackground": "#295b71",
+    "textShadow": "1px 1px 0px #f8f4e9",
+    "canvasBackground": "#eae2cb",
+    "timelineBackground": "#fff9eb",
+    "timelineFontColor": "#000000",
+    "backgroundHeader": "#035151",
+    "fontColorHeader": "#f8774f",
+    "detailBackground": "#eeeeee",
+    "infoBackground": "#33444c",
+    "infoFontColor": "#ffffff",
+    "searchbarBackground": "#295b71"
+  },
+  "projection": {
+    "columns": 5
+  },
   "detail": {
     "structure": [
       {
-        "label": "Description",
-        "type": "text",
+        "name": "Description",
         "source": "_description",
-        "display": "wide"
+        "display": "wide",
+        "type": "text"
       },
       {
-        "label": "Year",
-        "type": "text",
-        "source": "year"
+        "name": "Year",
+        "source": "year",
+        "display": "column",
+        "type": "text"
       },
       {
-        "label": "Keywords",
-        "type": "keywords",
-        "source": "keywords"
+        "name": "Keywords",
+        "source": "keywords",
+        "display": "column",
+        "type": "keywords"
+      },
+      {
+        "name": "Repository",
+        "source": "Repository[35277]",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Site",
+        "source": "Creation/Discovery Site[35280]",
+        "display": "column",
+        "type": "text"
       }
     ]
   }

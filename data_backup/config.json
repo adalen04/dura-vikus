@@ -1,0 +1,42 @@
+{
+  "project": {
+    "title": "Dura-Europos Images",
+    "subtitle": "Timeline View"
+  },
+
+  "loader": {
+    "data": "data/data.csv",
+    "timeline": "data/timeline.csv",
+    "info": "data/info.md",
+
+    "layouts": [
+      {
+        "title": "Time",
+        "type": "group",
+        "groupKey": "year",
+        "columns": 5
+      }
+    ]
+  },
+
+  "detail": {
+    "structure": [
+      {
+        "label": "Description",
+        "type": "text",
+        "source": "_description",
+        "display": "wide"
+      },
+      {
+        "label": "Year",
+        "type": "text",
+        "source": "year"
+      },
+      {
+        "label": "Keywords",
+        "type": "keywords",
+        "source": "keywords"
+      }
+    ]
+  }
+}
